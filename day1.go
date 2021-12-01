@@ -1,7 +1,6 @@
 package main
 
 import (
-	"log"
 	"os"
 	"strconv"
 )
@@ -45,7 +44,17 @@ func readInput(lines []string) []Measurement {
 
 func day1() {
 	wd, _ := os.Getwd()
-	lines := ReadNewlineSeparatedFile(wd + "/input/1.test.txt")
+	lines := ReadNewlineSeparatedFile(wd + "/input/1.txt")
 
-	log.Println("lines", readInput(lines))
+	measurements := readInput(lines)
+
+	noOfLarger := 0
+
+	for _, m := range measurements {
+		if m.relationToPreviousMeasurement == "+" {
+			noOfLarger++
+		}
+	}
+
+	print("number of increasing", noOfLarger)
 }
