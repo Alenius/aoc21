@@ -1,6 +1,7 @@
 package main
 
 import (
+	"log"
 	"os"
 	"strconv"
 )
@@ -50,11 +51,33 @@ func day1() {
 
 	noOfLarger := 0
 
+	// pt1
 	for _, m := range measurements {
 		if m.relationToPreviousMeasurement == "+" {
 			noOfLarger++
 		}
 	}
 
-	print("number of increasing", noOfLarger)
+	log.Println("number of increasing", noOfLarger)
+
+	// pt2
+	greatestSumRun := 0
+	previousSum := 0
+	for i, m := range measurements {
+		if i == 0 || i == 1 {
+			continue
+		}
+
+		newSum := m.value + measurements[i-1].value + measurements[i-2].value
+		if newSum > previousSum && previousSum != 0 {
+			greatestSumRun++
+			log.Println("increased")
+
+		}
+
+		previousSum = newSum
+	}
+
+	log.Println("greatest sum run", greatestSumRun)
+
 }
