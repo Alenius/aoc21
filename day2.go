@@ -71,10 +71,8 @@ func day2() {
 			position2.aim = position2.aim + measurement.value
 		}
 
-		log.Println("between", position2)
 	}
 
-	log.Println("pos2", position2)
 	log.Println("pos2", position2.x*position2.y)
 
 }
