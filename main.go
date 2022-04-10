@@ -58,7 +58,6 @@ func main() {
 		return
 	}
 
-	dayfunc := reflect.ValueOf(a).MethodByName("Day" + dayNo).Call(input)
-	fmt.Println(dayfunc)
-
+	dayfunc := reflect.ValueOf(a).MethodByName(funcName).Call(input)
+	fmt.Printf("result %v: %v \n", funcName, dayfunc)
 }
