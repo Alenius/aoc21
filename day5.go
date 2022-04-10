@@ -16,9 +16,8 @@ type ventCoordinates struct {
 	toY   int
 }
 
-func parseDay5Input() []ventCoordinates {
-	wd, _ := os.Getwd()
-	file, err := os.Open(wd + "/input/5.txt")
+func parseDay5Input(inputPath string) []ventCoordinates {
+	file, err := os.Open(inputPath)
 
 	if err != nil {
 		fmt.Println(err)
@@ -52,8 +51,8 @@ func parseDay5Input() []ventCoordinates {
 	return coordinates
 }
 
-func day5() {
-	coordinates := parseDay5Input()
+func (aoc) Day5(inputPath string) {
+	coordinates := parseDay5Input(inputPath)
 
 	ventPoints := make(map[[2]int]int)
 

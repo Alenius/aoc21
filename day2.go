@@ -2,7 +2,6 @@ package main
 
 import (
 	"log"
-	"os"
 	"strconv"
 	"strings"
 
@@ -33,9 +32,8 @@ func readDay2Input(lines []string) []PositionChange {
 	return positionChanges
 }
 
-func day2() {
-	wd, _ := os.Getwd()
-	lines := t.ReadNewlineSeparatedFile(wd + "/input/2.txt")
+func (aoc) Day2(inputPath string) {
+	lines := t.ReadNewlineSeparatedFile(inputPath)
 	measurements := readDay2Input(lines)
 
 	log.Println(len(lines))

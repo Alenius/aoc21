@@ -3,7 +3,6 @@ package main
 import (
 	"fmt"
 	"log"
-	"os"
 	"strconv"
 	"time"
 
@@ -68,9 +67,8 @@ func day6SolvePt2(spawningSlice [9]int) {
 
 }
 
-func day6() {
-	wd, _ := os.Getwd()
-	values := t.ReadCommaSeparatedFile(wd + "/input/6.txt")
+func (aoc) Day6(inputPath string) {
+	values := t.ReadCommaSeparatedFile(inputPath)
 	var lanternfishes []lanternfish
 	for _, value := range values {
 		startingValue, _ := strconv.Atoi(value)

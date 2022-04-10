@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"os"
 	"sort"
 	"strconv"
 	"strings"
@@ -42,9 +41,8 @@ func (numberMapping digitalNumber) print() {
 	fmt.Println(numberMapping.bottomMid)
 }
 
-func day8() {
-	wd, _ := os.Getwd()
-	lines := t.ReadNewlineSeparatedFile(wd + "/input/8.txt")
+func (aoc) Day8(inputPath string) {
+	lines := t.ReadNewlineSeparatedFile(inputPath)
 
 	patternsAndOutputs := parseInput(lines)
 

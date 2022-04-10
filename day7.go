@@ -2,16 +2,14 @@ package main
 
 import (
 	"fmt"
-	"os"
 	"sort"
 	"strconv"
 
 	t "github.com/alenius/aoctools"
 )
 
-func day7() {
-	wd, _ := os.Getwd()
-	values := t.ReadCommaSeparatedFile(wd + "/input/7.txt")
+func (aoc) Day7(inputPath string) {
+	values := t.ReadCommaSeparatedFile(inputPath)
 
 	var startingPositions []int
 	for _, value := range values {

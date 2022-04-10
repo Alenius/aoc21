@@ -2,7 +2,6 @@ package main
 
 import (
 	"log"
-	"os"
 	"strconv"
 
 	t "github.com/alenius/aoctools"
@@ -108,9 +107,8 @@ func solveDay2(lines []string, keepMost bool) int {
 	return int(final_value)
 }
 
-func day3() {
-	wd, _ := os.Getwd()
-	lines := t.ReadNewlineSeparatedFile(wd + "/input/3.txt")
+func (aoc) Day3(inputPath string) {
+	lines := t.ReadNewlineSeparatedFile(inputPath)
 	gammaEpsilons := readDay3Input(lines)
 
 	log.Println("consumption", gammaEpsilons)

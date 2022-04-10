@@ -2,7 +2,6 @@ package main
 
 import (
 	"log"
-	"os"
 	"strconv"
 
 	t "github.com/alenius/aoctools"
@@ -45,9 +44,8 @@ func readInput(lines []string) []Measurement {
 	return measurements
 }
 
-func day1() {
-	wd, _ := os.Getwd()
-	lines := t.ReadNewlineSeparatedFile(wd + "/input/1.txt")
+func (aoc) Day1(inputPath string) {
+	lines := t.ReadNewlineSeparatedFile(inputPath)
 
 	measurements := readInput(lines)
 
