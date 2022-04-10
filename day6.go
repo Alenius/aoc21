@@ -6,6 +6,8 @@ import (
 	"os"
 	"strconv"
 	"time"
+
+	t "github.com/alenius/aoctools"
 )
 
 type lanternfish struct {
@@ -68,7 +70,7 @@ func day6SolvePt2(spawningSlice [9]int) {
 
 func day6() {
 	wd, _ := os.Getwd()
-	values := ReadCommaSeparatedFile(wd + "/input/6.txt")
+	values := t.ReadCommaSeparatedFile(wd + "/input/6.txt")
 	var lanternfishes []lanternfish
 	for _, value := range values {
 		startingValue, _ := strconv.Atoi(value)

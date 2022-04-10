@@ -5,11 +5,13 @@ import (
 	"os"
 	"sort"
 	"strconv"
+
+	t "github.com/alenius/aoctools"
 )
 
 func day7() {
 	wd, _ := os.Getwd()
-	values := ReadCommaSeparatedFile(wd + "/input/7.txt")
+	values := t.ReadCommaSeparatedFile(wd + "/input/7.txt")
 
 	var startingPositions []int
 	for _, value := range values {
@@ -18,8 +20,8 @@ func day7() {
 	}
 	sort.Ints(startingPositions)
 
-	median := getMedian(startingPositions)
-	average := getAverage(startingPositions)
+	median := t.GetMedian(startingPositions)
+	average := t.GetAverage(startingPositions)
 	fmt.Println(median)
 
 	veryHighValue := 100000000000 // just take some high initial cost

@@ -5,6 +5,8 @@ import (
 	"os"
 	"strconv"
 	"strings"
+
+	t "github.com/alenius/aoctools"
 )
 
 type PositionChange struct {
@@ -33,7 +35,7 @@ func readDay2Input(lines []string) []PositionChange {
 
 func day2() {
 	wd, _ := os.Getwd()
-	lines := ReadNewlineSeparatedFile(wd + "/input/2.txt")
+	lines := t.ReadNewlineSeparatedFile(wd + "/input/2.txt")
 	measurements := readDay2Input(lines)
 
 	log.Println(len(lines))

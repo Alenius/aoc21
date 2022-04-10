@@ -4,6 +4,8 @@ import (
 	"log"
 	"os"
 	"strconv"
+
+	t "github.com/alenius/aoctools"
 )
 
 type GammaEpsilon struct {
@@ -108,7 +110,7 @@ func solveDay2(lines []string, keepMost bool) int {
 
 func day3() {
 	wd, _ := os.Getwd()
-	lines := ReadNewlineSeparatedFile(wd + "/input/3.txt")
+	lines := t.ReadNewlineSeparatedFile(wd + "/input/3.txt")
 	gammaEpsilons := readDay3Input(lines)
 
 	log.Println("consumption", gammaEpsilons)

@@ -4,6 +4,8 @@ import (
 	"log"
 	"os"
 	"strconv"
+
+	t "github.com/alenius/aoctools"
 )
 
 type Measurement struct {
@@ -45,7 +47,7 @@ func readInput(lines []string) []Measurement {
 
 func day1() {
 	wd, _ := os.Getwd()
-	lines := ReadNewlineSeparatedFile(wd + "/input/1.txt")
+	lines := t.ReadNewlineSeparatedFile(wd + "/input/1.txt")
 
 	measurements := readInput(lines)
 

@@ -6,6 +6,8 @@ import (
 	"sort"
 	"strconv"
 	"strings"
+
+	t "github.com/alenius/aoctools"
 )
 
 type signalPatternAndOutput struct {
@@ -42,7 +44,7 @@ func (numberMapping digitalNumber) print() {
 
 func day8() {
 	wd, _ := os.Getwd()
-	lines := ReadNewlineSeparatedFile(wd + "/input/8.txt")
+	lines := t.ReadNewlineSeparatedFile(wd + "/input/8.txt")
 
 	patternsAndOutputs := parseInput(lines)
 
